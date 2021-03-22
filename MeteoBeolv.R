@@ -27,4 +27,4 @@ Kolked.df <- data.frame(year = trunc(as.numeric(time(Kolked_T.ts))),
                         )
 
 ## Kölked export
-write.table(Kolked.df, "KölkedClim.txt", sep = "\t")
+write.table(Kolked.df, "KölkedClim.txt", sep = "\t", row.names = FALSE)
