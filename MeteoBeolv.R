@@ -54,3 +54,12 @@ Bata.df <- data.frame(year = trunc(as.numeric(time(Bata_T.ts))),
 
 ## Báta export
 write.table(Bata.df, "BátaClim.txt", sep = "\t", row.names = FALSE)
+
+## CarpatClim
+BataCC <- read.table("Bata_prec_temp_1961-2010.txt", head = TRUE)
+BataCC$prec. <- as.numeric(sub("\\,", ".", BataCC$prec.))
+BataCC$temp. <- as.numeric(sub("\\,", ".", BataCC$temp.))
+
+KolkedCC <- read.table("Kolked_prec_temp_1961-2010.txt", head = TRUE)
+KolkedCC$prec. <- as.numeric(sub("\\,", ".", KolkedCC$prec.))
+KolkedCC$temp. <- as.numeric(sub("\\,", ".", KolkedCC$temp.))
